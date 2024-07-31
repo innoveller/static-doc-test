@@ -1,0 +1,22 @@
+{%- macro sidebar(params) -%}
+
+<ul class="{{ params.class }}" id="{{ params.id }}">
+                {% for link in params.links %} 
+                {% if link.children %}
+                <li>
+                    <a href="#id_{{ link.id }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ link.name }}</a>
+                    {{ sidebar({ links: link.children, class: "collapse list-unstyled", id: "id_" + link.id  }) }}
+                </li>
+                {% elif link.url %}
+                <li>
+                    <a hx-get="{{ link.url }}" hx-target="#response-div">
+
+                        {{ link.name }}
+          
+                    </a>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            
+{%- endmacro -%}

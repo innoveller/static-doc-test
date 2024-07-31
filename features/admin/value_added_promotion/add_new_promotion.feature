@@ -36,16 +36,16 @@ Feature: Add New Value Added Promotion
         Given Mary is logged in as Super Admin
         And she has selected the hotel to manage
         And there is a promotion activated and using default message in value added promotion list
-        | id | title             | stay_start_date | stay_end_date | booking_start_date | booking_end_date | short_message_en | full_message_en | applied_room_type_id | message_by_room_type | is_activate | is_reviewed | group_id | is_updated
-        | 1  | Promotion 1       | 2023-08-01      | 2023-08-31    | null               | null             | 10% discount Spa | 10% discount Spa| { r1 }              | []                   | true        | true        | ABC      | false
+        | id | title             | stay_start_date | stay_end_date | booking_start_date | booking_end_date | short_message_en | full_message_en | applied_room_type_id | message_by_room_type | is_activate | is_reviewed | group_id | is_updated |
+        | 1  | Promotion 1       | 2023-08-01      | 2023-08-31    | null               | null             | 10% discount Spa | 10% discount Spa| { r1 }              | []                   | true        | true        | ABC      | false       |
 
     Scenario: Adding new value added promotion with custom message
         When Mary summit new 'Promotion 2' with custom message for September
         Then custom message roomType will be store in message_by_room_type as Json list
         And the promotion will be as follows
-        | id | title             | stay_start_date | stay_end_date | short_message_en | full_message_en  | applied_room_type_id | message_by_room_type                                      | is_activate  | is_reviewed  | group_id | is_updated
-        | 1  | Promotion 1       | 2023-08-01      | 2023-08-31    | 10% discount Spa | 10% discount Spa | { r1 }              | []                                                         | true         | true         | ABC      | false
-        | 2  | Promotion 2       | 2023-09-01      | 2023-09-30    | Spa, Gym         | 10% Spa, Free Gym| { r1, r2 }         | [{roomTypeId: r1, shortMessage: Spa, fullMessage: 10% Spa}] | false        | false        | EFG      | false
+        | id | title             | stay_start_date | stay_end_date | short_message_en | full_message_en  | applied_room_type_id | message_by_room_type                                      | is_activate  | is_reviewed  | group_id | is_updated |
+        | 1  | Promotion 1       | 2023-08-01      | 2023-08-31    | 10% discount Spa | 10% discount Spa | { r1 }              | []                                                         | true         | true         | ABC      | false      |
+        | 2  | Promotion 2       | 2023-09-01      | 2023-09-30    | Spa, Gym         | 10% Spa, Free Gym| { r1, r2 }         | [{roomTypeId: r1, shortMessage: Spa, fullMessage: 10% Spa}] | false        | false        | EFG      | false      |
 
     Scenario: Adding new promotion with existing stay start/end date or book start/end date
         When Marry summit new 'Promotion 3' with stay_start_date = 2023-08-01 and stay_end_date = 2023-09-30

@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "express": "^4.19.2"
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "devDependencies": {
+    "nunjucks": "^3.2.4"
   }
 }

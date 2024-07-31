@@ -51,23 +51,23 @@ Feature: Update Agent Promotion
         Given Mary is logged in as Super Admin
         And she has selected the hotel to manage
         And there are promotions in agent promotion list
-        | id | title                    | discount_percentage | stay_start_date | stay_end_date | is_activate | is_reviewed | group_id | is_updated
-        | 1  | Sep Promotion            | 10%                 | 2023-08-01      | 2023-08-15    | false       | false       | ABC      | false
-        | 2  | Raining Season Promotion | 20%                 | 2023-09-01      | 2023-10-31    | false       | false       | DEF      | false
+        | id | title                    | discount_percentage | stay_start_date | stay_end_date | is_activate | is_reviewed | group_id | is_updated |
+        | 1  | Sep Promotion            | 10%                 | 2023-08-01      | 2023-08-15    | false       | false       | ABC      | false      |
+        | 2  | Raining Season Promotion | 20%                 | 2023-09-01      | 2023-10-31    | false       | false       | DEF      | false      |
 
     Scenario: Mary update discount percentage of inactive promotion
         When Mary update 'Sep Promotion' discount_percentage to 20%
         Then discount_percentage will be updated to 20% in row id=1 as follows
-        | id | title                    | discount_percentage | is_activate | is_reviewed | group_id | is_updated
-        | 1  | Sep Promotion            | 20%                 | false       | false       | ABC      | false
-        | 2  | Raining Season Promotion | 20%                 | false       | false       | DEF      | false
+        | id | title                    | discount_percentage | is_activate | is_reviewed | group_id | is_updated |
+        | 1  | Sep Promotion            | 20%                 | false       | false       | ABC      | false      |
+        | 2  | Raining Season Promotion | 20%                 | false       | false       | DEF      | false      |
 
     Scenario: Mary activate promotion
         When Mary activate 'Sep Promotion'
         Then both is_activate and is_reviewed are true in row id=1 as follows
-        | id | title                    | is_activate | is_reviewed | group_id | is_updated
-        | 1  | Sep Promotion            | true        | true        | ABC      | false
-        | 2  | Raining Season Promotion | false       | false       | DEF      | false
+        | id | title                    | is_activate | is_reviewed | group_id | is_updated |
+        | 1  | Sep Promotion            | true        | true        | ABC      | false      |
+        | 2  | Raining Season Promotion | false       | false       | DEF      | false      |
 
     Scenario: Mary update date range in existing promotion
         When Mary update 'Raining Season Promotion' start stay date=2023-08-01
@@ -77,22 +77,22 @@ Feature: Update Agent Promotion
     Scenario: Mary extend promotion
         When Mary extend stay end date=2023-08-31 in 'Sep Promotion' that already activated
         Then is_updated will be true in row id=1 and a new row will be created with the same group_id and new stay_end_date as follows
-        | id | title                    | stay_start_date | stay_end_date | is_activate | is_reviewed | group_id | is_updated
-        | 1  | Sep Promotion            | 2023-08-01      | 2023-08-15    | true        | true        | ABC      | true
-        | 2  | Raining Season Promotion | 2023-09-01      | 2023-10-31    | false       | false       | DEF      | false
-        | 3  | Sep Promotion            | 2023-08-01      | 2023-08-31    | true        | true        | ABC      | false
+        | id | title                    | stay_start_date | stay_end_date | is_activate | is_reviewed | group_id | is_updated |
+        | 1  | Sep Promotion            | 2023-08-01      | 2023-08-15    | true        | true        | ABC      | true       |
+        | 2  | Raining Season Promotion | 2023-09-01      | 2023-10-31    | false       | false       | DEF      | false      |
+        | 3  | Sep Promotion            | 2023-08-01      | 2023-08-31    | true        | true        | ABC      | false      |
 
     Scenario: Mary update discount_percentage in 'Sep Promotion' again
         When Mary update discount_percentage to 30% in 'Sep Promotion' that already activated
         Then is_updated will be true in row id=3 and a new row will be created with the same group_id and discount 30% will be created in new row as follows
-        | id | title                    | discount_percentage | is_activate | is_reviewed | group_id | is_updated
-        | 1  | Sep Promotion            | 20%                 | true        | true        | ABC      | true
-        | 2  | Raining Season Promotion | 20%                 | false       | false       | DEF      | false
-        | 3  | Sep Promotion            | 20%                 | true        | true        | ABC      | true
-        | 4  | Sep Promotion            | 30%                 | true        | true        | ABC      | false
+        | id | title                    | discount_percentage | is_activate | is_reviewed | group_id | is_updated |
+        | 1  | Sep Promotion            | 20%                 | true        | true        | ABC      | true       |
+        | 2  | Raining Season Promotion | 20%                 | false       | false       | DEF      | false      |
+        | 3  | Sep Promotion            | 20%                 | true        | true        | ABC      | true       |
+        | 4  | Sep Promotion            | 30%                 | true        | true        | ABC      | false      |
 
     Scenario: Mary view agent promotion list
         Promotions with is_updated = false will be shown as follows
-        | title                    | discount_percentage | stay_start_date | stay_end_date | is_activate | is_reviewed | group_id | is_updated
-        | Raining Season Promotion | 20%                 | 2023-09-01      | 2023-10-31    | false       | false       | DEF      | false
-        | Sep Promotion            | 30%                 | 2023-08-01      | 2023-08-31    | true        | true        | ABC      | false
+        | title                    | discount_percentage | stay_start_date | stay_end_date | is_activate | is_reviewed | group_id | is_updated | 
+        | Raining Season Promotion | 20%                 | 2023-09-01      | 2023-10-31    | false       | false       | DEF      | false      |
+        | Sep Promotion            | 30%                 | 2023-08-01      | 2023-08-31    | true        | true        | ABC      | false      |

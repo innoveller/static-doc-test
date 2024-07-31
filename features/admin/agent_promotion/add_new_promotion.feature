@@ -31,15 +31,15 @@ Feature: Add New Agent Promotion
         Given Mary is logged in as Super Admin
         And she has selected the hotel to manage
         And there is a promotion activated in agent promotion list
-        | id | title         | discount_percentage | stay_start_date | stay_end_date | is_activate | is_reviewed | group_id | is_updated
-        | 1  | Sep Promotion | 10%                 | 2023-08-01      | 2023-08-31    | true        | true        | ABC      | false
+        | id | title         | discount_percentage | stay_start_date | stay_end_date | is_activate | is_reviewed | group_id | is_updated |
+        | 1  | Sep Promotion | 10%                 | 2023-08-01      | 2023-08-31    | true        | true        | ABC      | false      |
 
     Scenario: Adding new promotion
         When Mary submit new 'Raining Season Promotion' with 20% discount
         Then the promotion will be as follows
-        | id | title                    | discount_percentage | stay_start_date | stay_end_date | is_activate | is_reviewed | group_id | is_updated
-        | 1  | Sep Promotion            | 10%                 | 2023-08-01      | 2023-08-31    | true        | true        | ABC      | false
-        | 2  | Raining Season Promotion | 20%                 | 2023-09-01      | 2023-10-31    | false       | false       | EFG      | false
+        | id | title                    | discount_percentage | stay_start_date | stay_end_date | is_activate | is_reviewed | group_id | is_updated |
+        | 1  | Sep Promotion            | 10%                 | 2023-08-01      | 2023-08-31    | true        | true        | ABC      | false      |
+        | 2  | Raining Season Promotion | 20%                 | 2023-09-01      | 2023-10-31    | false       | false       | EFG      | false      |
 
     Scenario: Adding new promotion with existing stay start/end date
         When Mary submit new 'Holiday Promotion' with stay_start_date = 2023-08-01 and stay_end_date = 2023-09-30
