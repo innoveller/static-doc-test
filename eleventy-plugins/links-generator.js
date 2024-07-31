@@ -39,10 +39,8 @@ module.exports = function(eleventyConfig) {
         }
         
         var files = getFiles(dirs[index]);
-        console.log(files);
         for(var fIndex = 0 ; fIndex < files.length ; fIndex++) {
             var url = files[fIndex].replaceAll('features\\', '').replaceAll('\\', '/').replaceAll('.feature', '.txt');
-            console.log("Url ", url);
 
             if(url.includes('/')) {
                 var lastIndexOfSlash = url.lastIndexOf('/');
@@ -56,18 +54,14 @@ module.exports = function(eleventyConfig) {
                 var parentId = parents.get(parentName);
 
                 link = { "id": (dirs.length + fIndex), "parent_id": parentId, "name": capitalize(fileName), "url": url };
-                console.log("Parent id ", parentId);
             }
             else {
-                console.log("Parent id is null");
                 link = {"id": (dirs.length + fIndex), "parent_id": null, "name": capitalize(url), "url": url};
             }
             
             links.push(link);
         }
     }
-
-    console.log("Links : ", links);
 
     var result = [];
     for(var index = 0; index < links.length; index++) {
