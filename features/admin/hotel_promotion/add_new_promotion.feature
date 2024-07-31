@@ -55,8 +55,8 @@ Feature: Add New Hotel Promotion
         Given Mary is logged in as Super Admin
         And she has selected the hotel to manage
         And there is a promotion activated in hotel promotion list
-        | id | title             | discount_percentage | stay_start_date | stay_end_date | booking_start_date | booking_end_date | min_advance_day | min_night | max_night | rate_group_id | is_activate | is_reviewed | group_id | is_updated
-        | 1  | Hotel Promotion 1 | 10%                 | 2023-08-01      | 2023-08-31    | null               | null             | null            | null      | null      | { rg1 }       | true        | true        | ABC      | false
+        | id | title             | discount_percentage | stay_start_date | stay_end_date | booking_start_date | booking_end_date | min_advance_day | min_night | max_night | rate_group_id | is_activate | is_reviewed | group_id | is_updated |
+        | 1  | Hotel Promotion 1 | 10%                 | 2023-08-01      | 2023-08-31    | null               | null             | null            | null      | null      | { rg1 }       | true        | true        | ABC      | false      |
 
     Scenario: Adding new hotel promotion with advance day
         When Mary summit new 'Hotel Promotion 2' with 20% discount and define a rule that booking date need to advance at least 1 day with check-in date

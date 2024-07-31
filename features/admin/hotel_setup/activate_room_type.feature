@@ -3,10 +3,10 @@ Feature: Activating Room Type
     Given Mary is logged in as Hotel Admin
     And she has selected the hotel to manage
     And there are three room types for the hotel
-      | name             | active   |  active rate plans |  can activate
-      | Standard Room    | active   |  1                 |  can activate
-      | Deluxe Room      | inactive |  1                 |  can activate
-      | Family Room      | inactive |  0                 |  cannot activate
+      | name             | active   |  active rate plans |  can activate     |
+      | Standard Room    | active   |  1                 |  can activate     |
+      | Deluxe Room      | inactive |  1                 |  can activate     |
+      | Family Room      | inactive |  0                 |  cannot activate  |
 
   Scenario: Activating the room type with one or more active rate plans
     Given There is an active rate plan for "Deluxe Room"
