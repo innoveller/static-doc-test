@@ -1,1 +1,193 @@
-[{"id":1,"parent_id":null,"name":"Admin","children":[{"id":2,"parent_id":1,"name":"Agent Hotel Commission","children":[{"id":18,"parent_id":2,"name":"Update Commission","url":"admin/agent_hotel_commission/update_commission.txt"}]},{"id":3,"parent_id":1,"name":"Agent Promotion","children":[{"id":18,"parent_id":3,"name":"Add New Promotion","url":"admin/agent_promotion/add_new_promotion.txt"},{"id":19,"parent_id":3,"name":"Update Promotion","url":"admin/agent_promotion/update_promotion.txt"}]},{"id":4,"parent_id":1,"name":"Booking Amend","children":[{"id":18,"parent_id":4,"name":"Amend Stay Dates","url":"admin/booking_amend/amend_stay_dates.txt"}]},{"id":5,"parent_id":1,"name":"Hotel Promotion","children":[{"id":18,"parent_id":5,"name":"Add New Promotion","url":"admin/hotel_promotion/add_new_promotion.txt"},{"id":19,"parent_id":5,"name":"Update Promotion","url":"admin/hotel_promotion/update_promotion.txt"}]},{"id":6,"parent_id":1,"name":"Hotel Setup","children":[{"id":18,"parent_id":6,"name":"Activate Room Type","url":"admin/hotel_setup/activate_room_type.txt"},{"id":19,"parent_id":6,"name":"Add New Hotel","url":"admin/hotel_setup/add_new_hotel.txt"},{"id":20,"parent_id":6,"name":"Add Room Type","url":"admin/hotel_setup/add_room_type.txt"},{"id":21,"parent_id":6,"name":"Archiving Room Type","url":"admin/hotel_setup/archiving_room_type.txt"}]},{"id":7,"parent_id":1,"name":"Partial Payment","children":[{"id":18,"parent_id":7,"name":"Add Payment","url":"admin/partial_payment/add_payment.txt"},{"id":19,"parent_id":7,"name":"Setting Payable Options","url":"admin/partial_payment/setting_payable_options.txt"}]},{"id":8,"parent_id":1,"name":"Rates And Allotment","children":[{"id":18,"parent_id":8,"name":"Display Rates And Allotments","url":"admin/rates_and_allotment/display_rates_and_allotments.txt"},{"id":19,"parent_id":8,"name":"Update Allotment","url":"admin/rates_and_allotment/update_allotment.txt"}]},{"id":9,"parent_id":1,"name":"Rate Plan","children":[{"id":18,"parent_id":9,"name":"Create New Rate Plan","url":"admin/rate_plan/create_new_rate_plan.txt"},{"id":19,"parent_id":9,"name":"Rate Plan On Off","url":"admin/rate_plan/rate_plan_on_off.txt"}]},{"id":10,"parent_id":1,"name":"Value Added Promotion","children":[{"id":18,"parent_id":10,"name":"Add New Promotion","url":"admin/value_added_promotion/add_new_promotion.txt"},{"id":19,"parent_id":10,"name":"Update Promotion","url":"admin/value_added_promotion/update_promotion.txt"}]}]},{"id":11,"parent_id":null,"name":"Api","children":[{"id":18,"parent_id":11,"name":"Hotel Result Sorting","url":"api/hotel_result_sorting.txt"}]},{"id":12,"parent_id":null,"name":"Example","children":[{"id":13,"parent_id":12,"name":"Account Dashboard","children":[{"id":18,"parent_id":13,"name":"Dashboard","url":"example/account_dashboard/dashboard.txt"}]},{"id":14,"parent_id":12,"name":"Cash Withdrawl","children":[{"id":18,"parent_id":14,"name":"Account Holder Withdraws Cash","url":"example/cash_withdrawl/account_holder_withdraws_cash.txt"}]},{"id":15,"parent_id":12,"name":"Frequent Flyer","children":[{"id":18,"parent_id":15,"name":"Earning Frequent Flyer Points From Flights","url":"example/frequent_flyer/earning_frequent_flyer_points_from_flights.txt"},{"id":19,"parent_id":15,"name":"Earning Points From Past Flights","url":"example/frequent_flyer/earning_points_from_past_flights.txt"}]},{"id":16,"parent_id":12,"name":"Meeting Scheduling","children":[{"id":18,"parent_id":16,"name":"Scheduling","url":"example/meeting_scheduling/scheduling.txt"}]},{"id":17,"parent_id":12,"name":"Rates And Allotments","children":[{"id":18,"parent_id":17,"name":"Update Allotments","url":"example/rates_and_allotments/update_allotments.txt"}]}]}]
+[
+    {
+        "id": 1,
+        "parent_id": null,
+        "name": "Admin",
+        "children": [
+            {
+                "id": 2,
+                "parent_id": 1,
+                "name": "Agent Hotel Commission",
+                "children": [
+                    {
+                        "id": 12,
+                        "parent_id": 2,
+                        "name": "Update Commission",
+                        "url": "admin/agent_hotel_commission/update_commission.txt"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "parent_id": 1,
+                "name": "Agent Promotion",
+                "children": [
+                    {
+                        "id": 12,
+                        "parent_id": 3,
+                        "name": "Add New Promotion",
+                        "url": "admin/agent_promotion/add_new_promotion.txt"
+                    },
+                    {
+                        "id": 13,
+                        "parent_id": 3,
+                        "name": "Update Promotion",
+                        "url": "admin/agent_promotion/update_promotion.txt"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "parent_id": 1,
+                "name": "Booking Amend",
+                "children": [
+                    {
+                        "id": 12,
+                        "parent_id": 4,
+                        "name": "Amend Stay Dates",
+                        "url": "admin/booking_amend/amend_stay_dates.txt"
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "parent_id": 1,
+                "name": "Hotel Promotion",
+                "children": [
+                    {
+                        "id": 12,
+                        "parent_id": 5,
+                        "name": "Add New Promotion",
+                        "url": "admin/hotel_promotion/add_new_promotion.txt"
+                    },
+                    {
+                        "id": 13,
+                        "parent_id": 5,
+                        "name": "Update Promotion",
+                        "url": "admin/hotel_promotion/update_promotion.txt"
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "parent_id": 1,
+                "name": "Hotel Setup",
+                "children": [
+                    {
+                        "id": 12,
+                        "parent_id": 6,
+                        "name": "Activate Room Type",
+                        "url": "admin/hotel_setup/activate_room_type.txt"
+                    },
+                    {
+                        "id": 13,
+                        "parent_id": 6,
+                        "name": "Add New Hotel",
+                        "url": "admin/hotel_setup/add_new_hotel.txt"
+                    },
+                    {
+                        "id": 14,
+                        "parent_id": 6,
+                        "name": "Add Room Type",
+                        "url": "admin/hotel_setup/add_room_type.txt"
+                    },
+                    {
+                        "id": 15,
+                        "parent_id": 6,
+                        "name": "Archiving Room Type",
+                        "url": "admin/hotel_setup/archiving_room_type.txt"
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "parent_id": 1,
+                "name": "Partial Payment",
+                "children": [
+                    {
+                        "id": 12,
+                        "parent_id": 7,
+                        "name": "Add Payment",
+                        "url": "admin/partial_payment/add_payment.txt"
+                    },
+                    {
+                        "id": 13,
+                        "parent_id": 7,
+                        "name": "Setting Payable Options",
+                        "url": "admin/partial_payment/setting_payable_options.txt"
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "parent_id": 1,
+                "name": "Rates And Allotment",
+                "children": [
+                    {
+                        "id": 12,
+                        "parent_id": 8,
+                        "name": "Display Rates And Allotments",
+                        "url": "admin/rates_and_allotment/display_rates_and_allotments.txt"
+                    },
+                    {
+                        "id": 13,
+                        "parent_id": 8,
+                        "name": "Update Allotment",
+                        "url": "admin/rates_and_allotment/update_allotment.txt"
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "parent_id": 1,
+                "name": "Rate Plan",
+                "children": [
+                    {
+                        "id": 12,
+                        "parent_id": 9,
+                        "name": "Create New Rate Plan",
+                        "url": "admin/rate_plan/create_new_rate_plan.txt"
+                    },
+                    {
+                        "id": 13,
+                        "parent_id": 9,
+                        "name": "Rate Plan On Off",
+                        "url": "admin/rate_plan/rate_plan_on_off.txt"
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "parent_id": 1,
+                "name": "Value Added Promotion",
+                "children": [
+                    {
+                        "id": 12,
+                        "parent_id": 10,
+                        "name": "Add New Promotion",
+                        "url": "admin/value_added_promotion/add_new_promotion.txt"
+                    },
+                    {
+                        "id": 13,
+                        "parent_id": 10,
+                        "name": "Update Promotion",
+                        "url": "admin/value_added_promotion/update_promotion.txt"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "parent_id": null,
+        "name": "Api",
+        "children": [
+            {
+                "id": 12,
+                "parent_id": 11,
+                "name": "Hotel Result Sorting",
+                "url": "api/hotel_result_sorting.txt"
+            }
+        ]
+    }
+]
