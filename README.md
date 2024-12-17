@@ -17,6 +17,8 @@ Generated admin & agent_promotion <br><br>
 
 ![image](https://github.com/user-attachments/assets/d382abda-f559-4c11-bcb5-7aa748719cf2) <br>
 Rendering on [render](https://render.com/)
+<br><br>
+[Click here](https://static-doc-test.onrender.com) to view currently running sample site.
 
 
 
